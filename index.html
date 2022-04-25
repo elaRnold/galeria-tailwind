@@ -5,34 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/estilos.css" />
     <title>Practicando Tailwind</title>
 </head>
 <body>
-<div class="container mx-auto">
-    <h1 class="text-3xl font-bold text-center text-green-400">
-        Hello world!
-    </h1>
-    <button class="bg-blue-500 w-48 h-48 sm:bg-orange-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded"> 
-        el boton
-    </button>
-    <div class="bg-white border rounded-lg overflow-hidden">
-        <img src="https://mdbootstrap.com/img/new/slides/041.jpg" class="max-w-full h-auto" alt="..." />
+    <div class="container mx-auto">
+        <header>
+            <div class="h-40 bg-gradient-to-r from-purple-500 to-pink-500">
+                <div>
+                    <img src="/assets/imgs/Logo Uninorte.png" alt="logo" class="max-w-xs" alt="..." />
+                </div>
+                <div>
+                    <img src="/assets/imgs/arnold.jpeg" alt="logo" class="float-right max-w-full" alt="..." />
+                </div>
+            </div>
+        </header>
+        <h1 class="text-3xl font-bold text-center text-green-400">
+            Hello world!
+        </h1>
+        <button class="bg-blue-500 w-48 h-48 sm:bg-orange-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded"> 
+            el boton
+        </button>
+        <div class="bg-white border rounded-lg overflow-hidden">
+            <img src="https://mdbootstrap.com/img/new/slides/041.jpg" class="max-w-full h-auto" alt="..." />
+        </div>
+        <div class="flex flex-wrap justify-center">
+            <img
+            src="https://mdbootstrap.com/img/new/standard/city/041.jpg"
+            class="p-1 bg-white border rounded max-w-sm"
+            alt="..."
+        />
+        </div>
+        <h4 class="text-3xl font-bold text-red-800 text-right">
+            Hello world!
+        </h4>
+        <div class="m-5 p-5 border shadow-2xl">
+            <p class="text-2xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aperiam dolor blanditiis est iure sed enim modi, mollitia omnis rerum, architecto aliquam, incidunt maxime eligendi illum tempore natus. Id, tempore!
+            </p>
+        </div>
     </div>
-    <div class="flex flex-wrap justify-center">
-        <img
-        src="https://mdbootstrap.com/img/new/standard/city/041.jpg"
-        class="p-1 bg-white border rounded max-w-sm"
-        alt="..."
-      />
-      </div>
-    <h4 class="text-3xl font-bold text-red-800 text-right">
-        Hello world!
-    </h4>
-    <div class="m-5 p-5 border shadow-2xl">
-        <p class="text-2xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aperiam dolor blanditiis est iure sed enim modi, mollitia omnis rerum, architecto aliquam, incidunt maxime eligendi illum tempore natus. Id, tempore!
-        </p>
-    </div>
-</div>
 </body>
 </html>
