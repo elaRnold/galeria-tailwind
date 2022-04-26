@@ -5,26 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/estilos.css" />
+    <link rel="stylesheet" href="assets/CSS/estilos.css" />
     <title>Practicando Tailwind</title>
 </head>
 <body>
     <div class="container mx-auto">
-        <header>
-            <div class="h-40 bg-gradient-to-r from-purple-500 to-pink-500">
-                <div>
-                    <img src="/assets/imgs/Logo Uninorte.png" alt="logo" class="max-w-xs" alt="..." />
-                </div>
-                <div>
-                    <img src="/assets/imgs/arnold.jpeg" alt="logo" class="float-right max-w-full" alt="..." />
-                </div>
+
+        <header class="h-44 bg-gradient-to-r from-purple-500 to-pink-500 rounded">
+            <div class="max-w-xs inline-block">
+                <img src="/assets/imgs/Logo Uninorte.png" alt="logo" alt="..." />
+            </div>
+            <div class="max-h-0.5 inline-block float-right">
+                <img src="/assets/imgs/arnold.jpeg" class="p-1 bg-white border rounded max-w-sm" alt="arnold" alt="..." />
             </div>
         </header>
-        <h1 class="text-3xl font-bold text-center text-green-400">
-            Hello world!
-        </h1>
-        <button class="bg-blue-500 w-48 h-48 sm:bg-orange-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded"> 
-            el boton
+
+            <h1 class="text-2xl font-bold text-center text-green-400 my-10">
+                Selecciona Localmente O Añade La URL De Una Imagen Para Agregar En La Galería: 
+            </h1>
+
+            <div class="">
+                <form action="#" method="post" onsubmit="return false" id="form_buscar_imgs" class="text-center">
+                    <input type="file" id="imglocal" name="imagen" accept="image/png, image/jpeg">
+                    <div class="text-center">
+                        <input type="url" id="url" name="url" placeholder="https://example.com" class="border-2 mt-3"
+                            pattern="https://.*" size="30"required>
+                    </div>
+                    <button type="submit" id="enviar_info" class="border-double bg-gray border-4 my-10 mr-3 p-1 hover:bg-blue-300">Enviar</button>
+                    <button type="submit" id="cancelar_info" class="border-double border-4 my-10 p-1 hover:bg-red-300">Cancelar</button>
+                </form>
+            </div>
+
+        <section>
+
+        </section>
+        <!--------------------------------------------------------------------------------------------------------------------->
+        <button class="mt-40 bg-blue-500 w-48 h-48 sm:bg-orange-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded"> 
+            Buscar Localmente
         </button>
         <div class="bg-white border rounded-lg overflow-hidden">
             <img src="https://mdbootstrap.com/img/new/slides/041.jpg" class="max-w-full h-auto" alt="..." />
