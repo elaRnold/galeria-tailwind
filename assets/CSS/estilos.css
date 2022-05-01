@@ -1,3 +1,28 @@
 header{
     height: 150px;
 }
+
+  @font-face {
+    font-family: 'iconos';
+    src:  url('f../fonts/iconos/icomoon.eot?lauu0h');
+    src:  url('../fonts/iconos/icomoon.eot?lauu0h#iefix') format('embedded-opentype'),
+      url('../fonts/iconos/icomoon.ttf?lauu0h') format('truetype'),
+      url('../fonts/iconos/icomoon.woff?lauu0h') format('woff'),
+      url('../fonts/iconos/icomoon.svg?lauu0h#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+
+  
+.flecha_der:before {
+  font-family: 'iconos';
+  content: "\f101";
+  width: 20px;
+  height: 20px;
+}
+.flecha_izq:before {
+  font-family: 'iconos';
+  content: "\f100";
+}

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/CSS/estilos.css" />
-    <title>Practicando Tailwind</title>
+    <title>Galería Tailwind</title>
 </head>
 <body>
     <div class="container mx-auto">
@@ -20,47 +20,57 @@
             </div>
         </header>
 
-            <h1 class="text-2xl font-bold text-center text-green-400 my-10">
-                Selecciona Localmente O Añade La URL De Una Imagen Para Agregar En La Galería: 
-            </h1>
+        <h1 class="text-2xl font-bold text-center text-green-400 my-10">
+            Selecciona Localmente O Añade La URL De Una Imagen Para Agregar En La Galería: 
+        </h1>
 
-            <div class="">
-                <form action="#" method="post" onsubmit="return false" id="form_buscar_imgs" class="text-center">
-                    <input type="file" id="imglocal" name="imagen" accept="image/png, image/jpeg">
-                    <div class="text-center">
-                        <input type="url" id="url" name="url" placeholder="https://example.com" class="border-2 mt-3"
-                            pattern="https://.*" size="30"required>
-                    </div>
-                    <button type="submit" id="enviar_info" class="border-double bg-gray border-4 my-10 mr-3 p-1 hover:bg-blue-300">Enviar</button>
-                    <button type="submit" id="cancelar_info" class="border-double border-4 my-10 p-1 hover:bg-red-300">Cancelar</button>
-                </form>
+        <div>
+           <form action="#" method="post" onsubmit="return false" id="form_crear" class="text-center">
+                <input type="file" id="image" name="imagen" accept="image/*"/>
+                <div class="text-center">
+                    <input type="url" id="image_url" name="url" placeholder="https://example.com" class="border-2 mt-3"
+                        pattern="https://.*" size="30"required>
+                        <label for="description" class="mr-10" >
+                            <span>Descripción:</span>
+                            <input type="text" name="description" id="description" placeholder="Pon aquí tu descripción"
+                              class="h-8 px-12 w-64 rounded-lg focus:outline-none text-slate-500
+                                    ml-2 py-1 px-1 hover:bg-gray-200"
+                            />
+                        </label>
+                </div>
+                <button type="submit" id="enviar_foto" class="border-double bg-gray border-4 my-10 mr-3 p-1 hover:bg-blue-500">Enviar</button>
+                <button type="submit" id="cancelar_foto" class="border-double border-4 my-10 p-1 hover:bg-red-500">Cancelar</button>
+            </form>
+        </div>
+        <!--------------------------------------------------------------------------------------------------------------------->
+
+        <section class="py-4 flex flex-col justify-center ">
+
+            <div id="lista_con_imagenes" class="grid bg-gradient-to-r from-purple-500 to-pink-500 
+                    grid-cols-3 grid-cols-2 
+                    ml-40   h-auto w-9/12
+                    text-center p-2 pb-2 rounded-xl">
+
+            </div>
+            <div class="flex justify-end mr-56 mb-1">
+                <div class="flecha_izq" id = "flecha_izq"></div>
+                <div id="pagination" class="flex"></div>
+                <div class="flecha_der" id="flecha_der"></div>
+            </div>
+        </section>
+
+        <footer class="h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded flex justify-center">
+            <div class="py-5">
+                <h1 class="text-1xl font-bold text-center text-white">
+                    Todos los derechos reservados © 2022
+                </h1>
             </div>
 
-        <section>
+        </footer>
 
-        </section>
-        <!--------------------------------------------------------------------------------------------------------------------->
-        <button class="mt-40 bg-blue-500 w-48 h-48 sm:bg-orange-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded"> 
-            Buscar Localmente
-        </button>
-        <div class="bg-white border rounded-lg overflow-hidden">
-            <img src="https://mdbootstrap.com/img/new/slides/041.jpg" class="max-w-full h-auto" alt="..." />
-        </div>
-        <div class="flex flex-wrap justify-center">
-            <img
-            src="https://mdbootstrap.com/img/new/standard/city/041.jpg"
-            class="p-1 bg-white border rounded max-w-sm"
-            alt="..."
-        />
-        </div>
-        <h4 class="text-3xl font-bold text-red-800 text-right">
-            Hello world!
-        </h4>
-        <div class="m-5 p-5 border shadow-2xl">
-            <p class="text-2xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aperiam dolor blanditiis est iure sed enim modi, mollitia omnis rerum, architecto aliquam, incidunt maxime eligendi illum tempore natus. Id, tempore!
-            </p>
-        </div>
     </div>
+
+    <script src="./assets/scripts/script.js"></script>
+
 </body>
 </html>
